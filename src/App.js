@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import DP from './DP.svg';
 import './App.css';
-import './components/Navbar/Navbar.js';
-import Navbar from './components/Navbar/Navbar.js';
+
+import ProjectModals from './components/ProjectModal/ProjectModal.js';
 import { alignItems, backgroundColor, flexDirection, fontSize, getPx, justifyContent, minHeight } from 'styled-system';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 
 
 const DPlogo = styled.img({
@@ -45,30 +46,82 @@ const ContentWrapper = styled.div({
  
 })
   
+const ContentWrapperComponent = () => (
+  <div className="App">
+     <ContentWrapper>
+    <BodyText>
+      Hi! I'm a software developer that likes to make fun projects and work with Machine Learning!
+    </BodyText>
+    <DPlogo src={DP} alt="logo" />
+    
+  </ContentWrapper>
+  
+  <ProjectModals id= "projects"/>
+  
+  
+     </div>
+ 
+); 
+const StyledNav = styled.nav({
+  textAlign: 'start',
+  justifyContent: 'space-between',
+  padding: '20px',
+  marginLeft: '20px',
+  backgroundColor: '#ffffff',
+  zIndex: '1000',
+  position: 'sticky',
+  display: 'flex', // Ensure items are displayed in a row
+  gap: '50px',
+  top: '0',
+  
 
+});
+const StyledNavitems = styled.div(
+{
+  display: 'flex', // Ensure items are displayed in a row
+  gap: '20px',
+
+  
+}
+);
+
+const StyledLink = styled(Link)`
+text-decoration: none;
+color: inherit;
+
+
+`;
+
+const NavbarComponent = () => {
+  const scrollToSection = (sectionId) => {
+    const anchor = document.querySelector(`#${sectionId}`);
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
+  return (
+    <StyledNav>
+   <h3>
+   <StyledLink to="/">Portfolio</StyledLink>
+    </h3>
+  
+
+    </StyledNav>
+  );
+};
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-     <ContentWrapper>
-     <BodyText>
-          Hi! I'm a software developer that likes to make stuff!
-          
-         </BodyText>
-         <DPlogo src={DP} alt="logo" >
+    <BrowserRouter>
+      <div className="App animated animatedFadeInUp fadeInUp">
+        <NavbarComponent />
+        <Routes>
+          <Route path="/" element={<ContentWrapperComponent />} />
         
-        </DPlogo>
-        
-     </ContentWrapper>
-     
-     
-       
-         
-
-        
-       
-      
-    </div>
+        </Routes>
+      </div>
+    </BrowserRouter>
+    
   );
 }
 

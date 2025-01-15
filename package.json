@@ -2,7 +2,7 @@
   "name": "react-portfolio-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://MumtahenaH.github.io/portfolio-website",
+  
   "dependencies": {
     "animejs": "^3.2.2",
     "cra-template": "1.2.0",

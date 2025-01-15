@@ -100,17 +100,11 @@ color: inherit;
 `;
 
 const NavbarComponent = () => {
-  const scrollToSection = (sectionId) => {
-    const anchor = document.querySelector(`#${sectionId}`);
-    if (anchor) {
-      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  };
-
+ 
   return (
     <StyledNav>
    <h3>
-   <StyledLink to="/">Portfolio</StyledLink>
+   <StyledLink to="/">Mumtahena's Portfolio</StyledLink>
     </h3>
   
 

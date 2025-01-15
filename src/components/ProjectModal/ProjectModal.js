@@ -58,7 +58,11 @@ const StyledProjects = styled.div(
     }
   });
   
- 
+  const LinkText = styled.a({
+    color: 'gray',/* Sets text color to gray */
+    textDecoration: 'underline',
+    
+  })
 function ProjectModals(){
     return(
       <StyledItems>
@@ -69,7 +73,10 @@ function ProjectModals(){
       
         <BodyText>
 		<h2>Skin Condition Detection <span>Using YOLOv8</span></h2>
-		<p>An AI skincare solution that identifies targeted skin conditions and recommends products accordingly.</p>
+		<p>An AI skincare solution that identifies targeted skin conditions and recommends products accordingly. </p>
+
+    <p><i><LinkText href="https://github.com/MumtahenaH/Skin_Condition_Detection" target="_blank">Project Link</LinkText>.</i></p>
+   
 		</BodyText>
      
         
@@ -82,6 +89,7 @@ function ProjectModals(){
         <BodyText>
 		<h2>Transfer Value Estimation Of English Premier League Players <span>Using Machine Learning</span></h2>
 		<p>Using a data-driven approach requires the support of machine learning techniques to predict the transfer values of the Premier League players based on a dataset of performance metrics, demographic attributes, and financial records.</p>
+    <p><i><LinkText href="https://github.com/MumtahenaH/CSE445-Machine-Learning-Project-on-EPL-data-analysis-and-prediction" target="_blank">Project Link</LinkText>.</i></p>
 		</BodyText>
      
         
@@ -94,6 +102,7 @@ function ProjectModals(){
         <BodyText>
 		<h2>TravelEase <span>A Software Solution to Flight Booking</span></h2>
 		<p>A user-friendly software platform designed to simplify travel planning by providing seamless options for booking flights and hotels.Detailed flight pages with essential information such as departure and arrival times and detailed hotel pages that include room types and user reviews. Also has voice search feature for further accessibility. </p>
+    <p><i><LinkText href="https://github.com/MumtahenaH/TravelEase" target="_blank">Project Link</LinkText>.</i></p>
 		</BodyText>
      
         

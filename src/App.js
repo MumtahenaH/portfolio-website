@@ -45,12 +45,19 @@ const ContentWrapper = styled.div({
   },
  
 })
+const LinkText = styled.a({
+  color: 'gray',/* Sets text color to gray */
+  textDecoration: 'underline',
   
+})
 const ContentWrapperComponent = () => (
   <div className="App">
      <ContentWrapper>
     <BodyText>
       Hi! I'm a software developer that likes to make fun projects and work with Machine Learning!
+      Check out more of my work at <LinkText href="https://github.com/MumtahenaH" target="_blank">Github</LinkText>.
+      Or, you can shoot me an <LinkText href="mailto:mumtahenawork@gmail.com" target="_blank">email</LinkText>! 
+
     </BodyText>
     <DPlogo src={DP} alt="logo" />
     
